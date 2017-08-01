@@ -24,6 +24,9 @@ class MainHandler(webapp2.RequestHandler):
         b = bucket.blob('test.txt', chunk_size=262144 * 2)
         b.upload_from_string('tesssssss')
 
+        # or download
+        # print(b.download_as_string())
+
         self.response.write('ok')
 
 
